@@ -16,7 +16,6 @@ export const Admin = () => {
 
   return data.isAdmin? (
     <Box bg={"blue.900"} minH={"100vh"}>
-      <Clock/>
       <Flex justifyContent={"end"} mr={15}>
       <Button bg="orange.400" color={"blue.900"} onClick={() => setIsModalOpen(true)} >
         Add Employee

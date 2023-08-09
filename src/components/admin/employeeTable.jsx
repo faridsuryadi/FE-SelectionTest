@@ -31,6 +31,7 @@ export const EmployeeTable = () => {
               <Th color={"white"}>Name</Th>
               <Th color={"white"}>Role</Th>
               <Th color={"white"}>Birthdate</Th>
+              <Th color={"white"}>Join Date</Th>
               <Th color={"white"}>Salary</Th>
             </Tr>
           </Thead>
@@ -55,6 +56,9 @@ export const EmployeeTable = () => {
                 </Td>
                 <Td>
                   <Text color="white">{item.birthDate}</Text>
+                </Td>
+                <Td>
+                  <Text color="white">{item.createdAt.substring(0,10)}</Text>
                 </Td>
                 <Td color="white">
                     {new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR" }).format(item.Role?.salary*20)}

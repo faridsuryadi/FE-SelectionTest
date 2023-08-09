@@ -3,6 +3,7 @@ import Axios from "axios";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { Clock } from "../clock";
 export const AdminAbsenHistory = () => {
     const [absen, setAbsen] = useState([]);
   const token = localStorage.getItem("token")
@@ -29,9 +30,10 @@ export const AdminAbsenHistory = () => {
     return  (
         <Box minH={"100vh"} bg={"blue.900"}>
         <Box textAlign={"center"} width="90%" mx={"auto"}>
-            <Text mt={5}  color={"orange.400"} fontWeight={"bold"} mb={5} fontFamily={"Verdana"} fontSize={"60px"}>
+            <Text mt={5}  color={"orange.400"} fontWeight={"bold"}  fontFamily={"Verdana"} fontSize={"60px"}>
                 ATTENDANCE LOG
             </Text>
+            <Clock/>
             <TableContainer>
   <Table alignContent={"center"}>
     <Tbody>
